@@ -13,4 +13,5 @@ python -m ipykernel install --user --name geospatial --display-name "Python [geo
 git clone https://github.com/e-sensing/SITS_R_notebook
 jupyter notebook
 ```
-
+## SITS
+This notebook depends on the SITS package => https://github.com/e-sensing/sits
