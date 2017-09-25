@@ -2,12 +2,14 @@
 A Jupyter notebook to demonstrate SITS package.
 
 ## DEPENDENCIES
-This notebook depends on the SITS R package => https://github.com/e-sensing/sits
+This notebook depends on the R packages IRkernel, ggmap, and SITS
 
 ## Notebook setup Ubuntu 16
 
 ```bash
-# python setup
+
+sudo apt-get install libudunits2-dev libpng-dev libgdal-dev
+# conda setup
 conda update conda
 conda create --name geospatial python=2.7
 source activate geospatial
@@ -15,8 +17,9 @@ conda install ipykernel
 conda install nb_conda
 # R setup
 R                                                       # start an R session
-install.packages('devtools')
+install.packages(c('devtools', 'ggmap', 'sf'))
 devtools::install_github('IRkernel/IRkernel')
+devtools::install_github('e-sensing/sits')
 IRkernel::installspec() 
 quit()                                                  # finish R session
 # notebook setup
@@ -27,7 +30,7 @@ jupyter notebook SITI_R_notebook.ipynb
 ```
 
 
-## Notebook setup
+## Notebook setup MAC
 
 ```bash
 conda update conda
